@@ -1,10 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Menu, Search } from "lucide-react";
+import { Menu } from "lucide-react";
 import { CREAM } from "@/lib/theme";
 
-const NAV_LINKS = ["Collections", "Story", "Journal", "About", "Contact"];
+const NAV_LINKS = ["Collections", "Story", "Journal"];
 const SCROLL_THRESHOLD = 32;
 
 export function Header() {
@@ -47,12 +47,33 @@ export function Header() {
           ))}
         </nav>
 
-        <div
-          className={`flex items-center gap-6 text-xs font-medium tracking-[0.15em] transition-colors duration-300 ${isLight ? "text-white/90" : "text-neutral-800"}`}
-        >
+        <div className="flex items-center gap-3">
+          <a
+            href="#"
+            className={`hidden border px-4 py-2 text-xs font-medium tracking-[0.15em] uppercase transition-colors lg:inline-flex ${
+              isLight
+                ? "border-white/40 text-white hover:bg-white/10"
+                : "border-neutral-900/20 text-neutral-900 hover:bg-neutral-900/5"
+            }`}
+          >
+            About Us
+          </a>
+          <a
+            href="#"
+            className={`hidden border px-4 py-2 text-xs font-medium tracking-[0.15em] uppercase transition-colors lg:inline-flex ${
+              isLight
+                ? "border-white/40 text-white hover:bg-white/10"
+                : "border-neutral-900/20 text-neutral-900 hover:bg-neutral-900/5"
+            }`}
+          >
+            Contact Us
+          </a>
+
           <button
             type="button"
-            className={`flex items-center gap-2 uppercase transition-colors ${isLight ? "hover:text-white/60" : "hover:text-neutral-500"}`}
+            className={`flex items-center gap-2 text-xs font-medium tracking-[0.15em] uppercase transition-colors lg:hidden ${
+              isLight ? "text-white/90 hover:text-white/60" : "text-neutral-800 hover:text-neutral-500"
+            }`}
           >
             <span className="hidden sm:inline">Menu</span>
             <Menu className="h-4 w-4" aria-hidden="true" />

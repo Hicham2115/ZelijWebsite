@@ -1,6 +1,7 @@
 import { Hero } from "@/components/sections/Hero";
 import { Philosophy } from "@/components/sections/Philosophy";
 import { Collections } from "@/components/sections/Collections";
+import { MaterialCraft } from "@/components/sections/MaterialCraft";
 import { CREAM } from "@/lib/theme";
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
       <Hero />
       <Philosophy />
       <Collections />
+      <MaterialCraft />
     </div>
   );
 }
