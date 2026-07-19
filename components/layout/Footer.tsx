@@ -27,16 +27,16 @@ const LINK_COLUMNS = [
     heading: "Explore",
     links: ["Collections", "Marble", "Zellij", "Projects", "About MAREA"],
   },
-  {
-    heading: "Information",
-    links: [
-      "Care & Maintenance",
-      "FAQs",
-      "Delivery & Returns",
-      "Sustainability",
-      "Warranty",
-    ],
-  },
+  // {
+  //   heading: "Information",
+  //   links: [
+  //     "Care & Maintenance",
+  //     "FAQs",
+  //     "Delivery & Returns",
+  //     "Sustainability",
+  //     "Warranty",
+  //   ],
+  // },
   {
     heading: "Company",
     links: ["Our Story", "Careers", "Press", "Trade Program", "Contact"],
@@ -225,7 +225,7 @@ export function Footer() {
 
         <div
           style={{ backgroundColor: CREAM }}
-          className="grid grid-cols-1 gap-10 p-8 sm:grid-cols-2 sm:gap-8 sm:p-10 lg:grid-cols-4 lg:gap-0 lg:divide-x lg:divide-neutral-900/10 lg:p-14"
+          className="grid grid-cols-1 gap-10 p-8 sm:grid-cols-3 sm:gap-8 sm:p-10 lg:gap-0 lg:divide-x lg:divide-neutral-900/10 lg:p-14"
         >
           {LINK_COLUMNS.map((column) => (
             <div key={column.heading} className="lg:pl-8 lg:first:pl-0">
