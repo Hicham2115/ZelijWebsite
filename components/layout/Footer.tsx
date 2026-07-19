@@ -1,24 +1,41 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowRight, ArrowUp, Briefcase, Camera, Droplet, Gem, Globe, Hand, Mail, Waves } from "lucide-react";
+import {
+  ArrowRight,
+  Briefcase,
+  Camera,
+  Globe,
+  Hand,
+  Leaf,
+  Mail,
+} from "lucide-react";
 import { useForm } from "@tanstack/react-form";
 import { toast } from "sonner";
-import footerImage from "@/app/assets/imgs1/ChatGPT Image Jul 19, 2026, 08_18_26 PM.png";
+import footerImage from "@/app/assets/footer.png";
 import { Input } from "@/components/ui/input";
 import { CREAM, INK, TERRACOTTA } from "@/lib/theme";
 import { emailSchema } from "@/lib/schemas";
 
-const TAGLINES = ["Water.", "Material.", "Atmosphere.", "Intention."];
+const MOSAIC_GREEN = "#1F3B30";
+const MOSAIC_CREAM = "#D9C7A1";
+
+const TAGLINES = ["Marble.", "Zelij.", "Atmosphere.", "Intention."];
 
 const LINK_COLUMNS = [
   {
     heading: "Explore",
-    links: ["Collections", "Material & Craft", "Journal", "Projects", "About MAREA"],
+    links: ["Collections", "Marble", "Zellij", "Projects", "About MAREA"],
   },
   {
     heading: "Information",
-    links: ["Care & Maintenance", "FAQs", "Delivery & Returns", "Sustainability", "Warranty"],
+    links: [
+      "Care & Maintenance",
+      "FAQs",
+      "Delivery & Returns",
+      "Sustainability",
+      "Warranty",
+    ],
   },
   {
     heading: "Company",
@@ -33,38 +50,106 @@ const SOCIALS = [
   { icon: Mail, label: "Email" },
 ];
 
+const LEGAL_LINKS = ["Privacy Policy", "Terms & Conditions", "Cookies"];
+
+function ZelligeStar({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 40 40" className={className} aria-hidden="true">
+      <g stroke={TERRACOTTA} strokeWidth="0.6" strokeLinejoin="round">
+        {[0, 45, 90, 135, 180, 225, 270, 315].map((angle, i) => (
+          <polygon
+            key={angle}
+            points="20,20 16,7 20,2 24,7"
+            fill={i % 2 === 0 ? MOSAIC_GREEN : MOSAIC_CREAM}
+            transform={`rotate(${angle} 20 20)`}
+          />
+        ))}
+      </g>
+      <circle cx="20" cy="20" r="1.4" fill={TERRACOTTA} />
+    </svg>
+  );
+}
+
+function ZelligeDiamond({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 40 40" className={className} aria-hidden="true">
+      <g stroke={TERRACOTTA} strokeWidth="0.6">
+        <rect
+          x="14"
+          y="3"
+          width="11"
+          height="11"
+          fill={MOSAIC_GREEN}
+          transform="rotate(45 19.5 8.5)"
+        />
+        <rect
+          x="26"
+          y="14.5"
+          width="11"
+          height="11"
+          fill={MOSAIC_CREAM}
+          transform="rotate(45 31.5 20)"
+        />
+        <rect
+          x="14"
+          y="26"
+          width="11"
+          height="11"
+          fill={MOSAIC_GREEN}
+          transform="rotate(45 19.5 31.5)"
+        />
+        <rect
+          x="3"
+          y="14.5"
+          width="11"
+          height="11"
+          fill={MOSAIC_CREAM}
+          transform="rotate(45 8.5 20)"
+        />
+      </g>
+    </svg>
+  );
+}
+
 const VALUES = [
   {
-    icon: Gem,
+    icon: ZelligeStar,
     label: "Natural Materials",
-    description: "Sourced with respect. Made to last.",
+    description:
+      "Carefully selected marble and authentic zellij. Made to last.",
   },
   {
-    icon: Droplet,
-    label: "Water Conscious",
-    description: "Designing for a more sustainable future.",
+    icon: ZelligeDiamond,
+    label: "Tradition & Craft",
+    description: "Rooted in Moroccan craftsmanship and heritage.",
+  },
+  {
+    icon: Leaf,
+    label: "Sustainable Choice",
+    description: "Responsible sourcing for a more beautiful future.",
   },
   {
     icon: Hand,
-    label: "Crafted with Care",
-    description: "Expert craftsmanship. Timeless quality.",
+    label: "Made with Care",
+    description: "Attention to detail in every piece and finishing.",
   },
   {
-    icon: Waves,
-    label: "Spaces That Restore",
-    description: "Creating calm in the everyday.",
+    icon: ZelligeStar,
+    label: "Spaces That Inspire",
+    description: "Timeless design for spaces that feel calm and meaningful.",
   },
 ];
 
-const LEGAL_LINKS = ["Privacy Policy", "Terms & Conditions", "Cookies"];
-
-function FooterLinkColumn({ heading, links }: { heading: string; links: string[] }) {
+function FooterLinkColumn({
+  heading,
+  links,
+}: {
+  heading: string;
+  links: string[];
+}) {
   return (
     <div>
-      <p
-        style={{ color: `${CREAM}99` }}
-        className="text-xs font-medium tracking-[0.2em] uppercase"
-      >
+      <p className="text-xs font-medium tracking-[0.2em] text-neutral-900/60 uppercase">
         {heading}
       </p>
       <ul className="mt-6 flex flex-col gap-4">
@@ -72,7 +157,7 @@ function FooterLinkColumn({ heading, links }: { heading: string; links: string[]
           <li key={link}>
             <a
               href="#"
-              className="text-sm text-white/80 transition-colors hover:text-white"
+              className="text-sm text-neutral-700 transition-colors hover:text-neutral-900"
             >
               {link}
             </a>
@@ -89,7 +174,9 @@ export function Footer() {
     onSubmit: async ({ value }) => {
       const parsed = emailSchema.safeParse(value.email);
       if (!parsed.success) {
-        toast.error(parsed.error.issues[0]?.message ?? "Une erreur est survenue.");
+        toast.error(
+          parsed.error.issues[0]?.message ?? "Une erreur est survenue.",
+        );
         return;
       }
       toast.success("Merci ! Vous êtes inscrit(e) à notre newsletter.");
@@ -98,67 +185,48 @@ export function Footer() {
   });
 
   return (
-    <footer style={{ backgroundColor: INK }} className="relative overflow-hidden">
-      <svg width="0" height="0" aria-hidden="true">
-        <defs>
-          <clipPath id="footer-blob-left" clipPathUnits="objectBoundingBox">
-            <path d="M0,0 L0.62,0 C0.78,0.08 0.68,0.22 0.8,0.34 C0.9,0.46 0.66,0.55 0.75,0.68 C0.82,0.78 0.62,0.85 0.68,0.95 C0.7,1 0.6,1 0.5,1 L0,1 Z" />
-          </clipPath>
-          <clipPath id="footer-blob-right" clipPathUnits="objectBoundingBox">
-            <path d="M1,0 L0.4,0 C0.25,0.1 0.35,0.25 0.22,0.4 C0.1,0.55 0.3,0.7 0.18,0.85 C0.12,0.95 0.25,1 0.4,1 L1,1 Z" />
-          </clipPath>
-          <path id="footer-circle-path" d="M 50,50 m -38,0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0" />
-        </defs>
-      </svg>
-
-      <div className="relative grid grid-cols-1 gap-16 px-6 py-20 sm:px-10 lg:grid-cols-[1fr_1.6fr] lg:gap-10 lg:px-14 lg:py-24">
-        <div className="relative flex min-h-[420px] flex-col justify-between overflow-hidden lg:min-h-0">
-          <div
-            className="absolute inset-y-0 left-0 -mx-6 w-[calc(100%+3rem)] sm:-mx-10 sm:w-[calc(100%+5rem)] lg:mx-0 lg:-my-24 lg:h-[calc(100%+12rem)] lg:w-full"
-            style={{ clipPath: "url(#footer-blob-left)" }}
-          >
+    <footer className="relative overflow-hidden">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.6fr]">
+        <div className="relative flex min-h-105 flex-col justify-between gap-8 overflow-hidden p-8 sm:p-10 lg:min-h-0 lg:p-14">
+          <div className="absolute inset-0">
             <Image
               src={footerImage}
-              alt="Gros plan sur une dalle de marbre noir veiné de blanc"
+              alt="Marbre veiné avec ombre de feuillage et bordure de zellige vert et crème"
               fill
               sizes="(min-width: 1024px) 40vw, 100vw"
               className="object-cover"
+              style={{ objectPosition: "left top" }}
+            />
+            <div
+              aria-hidden="true"
+              className="absolute inset-0"
+              style={{
+                background: `linear-gradient(to right, transparent 0%, transparent 55%, ${CREAM}CC 78%, ${CREAM} 92%)`,
+              }}
             />
           </div>
 
           <div className="relative z-10 flex flex-col gap-6">
-            <span className="font-serif text-4xl tracking-[0.3em] text-white">
+            <span className="font-serif text-4xl tracking-[0.3em] text-neutral-900">
               MAREA
             </span>
-            <span className="h-px w-10 bg-white/40" />
-            <p
-              style={{ color: TERRACOTTA }}
-              className="flex flex-col gap-1 text-xs font-medium tracking-[0.25em] uppercase"
-            >
+            <span className="h-px w-10 bg-neutral-900/30" />
+            {/* <p className="flex flex-col gap-1 text-xs font-medium tracking-[0.25em] text-neutral-900/80 uppercase">
               {TAGLINES.map((line) => (
                 <span key={line}>{line}</span>
               ))}
-            </p>
-            <p className="max-w-64 text-sm leading-relaxed text-white/70">
-              MAREA creates timeless bathroom environments where natural
-              materials and thoughtful design cultivate calm and clarity.
+            </p> */}
+            <p className=" text-sm leading-relaxed text-neutral-600">
+              MAREA creates timeless spaces where natural marble and traditional
+              zellij come together in perfect harmony.
             </p>
           </div>
-
-          <button
-            type="button"
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="group relative z-10 inline-flex w-fit items-center gap-3 text-xs font-medium tracking-[0.15em] text-white uppercase transition-colors hover:text-white/70"
-          >
-            Scroll to top
-            <ArrowUp
-              className="h-4 w-4 transition-transform group-hover:-translate-y-1"
-              aria-hidden="true"
-            />
-          </button>
         </div>
 
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-8 lg:grid-cols-4 lg:divide-x lg:divide-white/10">
+        <div
+          style={{ backgroundColor: CREAM }}
+          className="grid grid-cols-1 gap-10 p-8 sm:grid-cols-2 sm:gap-8 sm:p-10 lg:grid-cols-4 lg:gap-0 lg:divide-x lg:divide-neutral-900/10 lg:p-14"
+        >
           {LINK_COLUMNS.map((column) => (
             <div key={column.heading} className="lg:pl-8 lg:first:pl-0">
               <FooterLinkColumn heading={column.heading} links={column.links} />
@@ -166,15 +234,11 @@ export function Footer() {
           ))}
 
           <div className="lg:pl-8">
-            <p
-              style={{ color: `${CREAM}99` }}
-              className="text-xs font-medium tracking-[0.2em] uppercase"
-            >
+            <p className="text-xs font-medium tracking-[0.2em] text-neutral-900/60 uppercase">
               Connect
             </p>
-            <p className="mt-6 max-w-52 text-sm leading-relaxed text-white/70">
-              Thoughtful updates. New collections. Design inspiration. No
-              noise.
+            <p className="mt-6 max-w-52 text-sm leading-relaxed text-neutral-600">
+              Thoughtful updates. New collections. Design inspiration. No noise.
             </p>
 
             <form
@@ -182,7 +246,7 @@ export function Footer() {
                 event.preventDefault();
                 form.handleSubmit();
               }}
-              className="mt-6 flex items-center gap-2 border-b border-white/20 pb-2"
+              className="mt-6 flex items-center gap-2 border-b border-neutral-900/20 pb-2"
             >
               <form.Field name="email">
                 {(field) => (
@@ -192,14 +256,14 @@ export function Footer() {
                     onChange={(event) => field.handleChange(event.target.value)}
                     placeholder="Your email"
                     aria-label="Adresse e-mail"
-                    className="h-auto flex-1 rounded-none border-0 bg-transparent p-0 text-sm text-white placeholder:text-white/40 focus-visible:ring-0"
+                    className="h-auto flex-1 rounded-none border-0 bg-transparent p-0 text-sm text-neutral-900 placeholder:text-neutral-400 focus-visible:ring-0"
                   />
                 )}
               </form.Field>
               <button
                 type="submit"
                 aria-label="S'inscrire à la newsletter"
-                className="shrink-0 text-white transition-transform hover:translate-x-1"
+                className="shrink-0 text-neutral-900 transition-transform hover:translate-x-1"
               >
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </button>
@@ -211,7 +275,7 @@ export function Footer() {
                   key={label}
                   href="#"
                   aria-label={label}
-                  className="flex h-8 w-8 items-center justify-center rounded-full border border-white/20 text-white/80 transition-colors hover:border-white/50 hover:text-white"
+                  className="flex h-8 w-8 items-center justify-center rounded-full border border-neutral-900/20 text-neutral-700 transition-colors hover:border-neutral-900/50 hover:text-neutral-900"
                 >
                   <Icon className="h-4 w-4" aria-hidden="true" />
                 </a>
@@ -221,80 +285,30 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="relative border-t border-white/10 px-6 py-10 sm:px-10 lg:px-14">
-        <div className="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-4">
-          {VALUES.map(({ icon: Icon, label, description }) => (
-            <div key={label} className="flex flex-col gap-3">
+      <div
+        style={{ backgroundColor: CREAM }}
+        className="relative border-t border-neutral-900/10"
+      >
+        <div className="grid grid-cols-2 gap-x-6 gap-y-10 px-6 py-16 sm:grid-cols-3 sm:px-10 lg:grid-cols-5 lg:divide-x lg:divide-neutral-900/10 lg:px-14">
+          {VALUES.map(({ icon: Icon, label, description }, index) => (
+            <div
+              key={`${label}-${index}`}
+              className="flex flex-col gap-3 lg:px-6 lg:first:pl-0"
+            >
               <Icon
-                className="h-6 w-6"
+                className="h-9 w-9"
                 strokeWidth={1.25}
                 style={{ color: TERRACOTTA }}
                 aria-hidden="true"
               />
-              <p className="text-xs font-medium tracking-[0.15em] text-white uppercase">
+              <p className="text-xs font-medium tracking-[0.15em] text-neutral-900 uppercase">
                 {label}
               </p>
-              <p className="text-sm leading-relaxed text-white/60">
+              <p className="text-sm leading-relaxed text-neutral-600">
                 {description}
               </p>
             </div>
           ))}
-        </div>
-      </div>
-
-      <div className="relative overflow-hidden border-t border-white/10">
-        <div
-          className="absolute inset-y-0 right-0 w-3/5"
-          style={{ clipPath: "url(#footer-blob-right)", backgroundColor: CREAM }}
-        />
-
-        <div className="relative flex flex-col gap-8 px-6 py-10 sm:px-10 lg:flex-row lg:items-center lg:justify-between lg:px-14">
-          <div className="flex items-center gap-6">
-            <div className="relative flex h-24 w-24 shrink-0 items-center justify-center">
-              <svg viewBox="0 0 100 100" className="absolute inset-0 h-full w-full">
-                <circle
-                  cx="50"
-                  cy="50"
-                  r="48"
-                  fill="none"
-                  stroke={`${TERRACOTTA}66`}
-                  strokeWidth="0.5"
-                />
-                <text
-                  fill={TERRACOTTA}
-                  fontSize="6.4"
-                  letterSpacing="0.15em"
-                  style={{ fontFamily: "var(--font-playfair)" }}
-                >
-                  <textPath href="#footer-circle-path">
-                    TIMELESS BY NATURE &middot; DESIGNED TO ENDURE &middot;
-                  </textPath>
-                </text>
-              </svg>
-              <span className="font-serif text-lg text-white">M</span>
-            </div>
-
-            <div className="flex flex-wrap items-center gap-3">
-              <span className="text-xs font-medium tracking-[0.2em] text-white/70 uppercase">
-                41.3874&deg; N, 2.1686&deg; E
-              </span>
-              <span className="h-px w-6 bg-white/30" />
-              <span className="font-serif text-base text-white/90 italic">
-                Inspired by nature. Designed for life.
-              </span>
-            </div>
-          </div>
-
-          <div className="flex flex-col items-start gap-2 text-xs text-white/60 lg:items-end">
-            <span>&copy; MAREA 2024. All rights reserved.</span>
-            <div className="flex flex-wrap items-center gap-x-4">
-              {LEGAL_LINKS.map((link) => (
-                <a key={link} href="#" className="transition-colors hover:text-white">
-                  {link}
-                </a>
-              ))}
-            </div>
-          </div>
         </div>
       </div>
     </footer>
