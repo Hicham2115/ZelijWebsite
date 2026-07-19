@@ -46,7 +46,7 @@ export function CallToAction() {
 
   return (
     <>
-      <section className="relative min-h-[85vh] overflow-hidden">
+      <section id="contact" className="relative min-h-[85vh] scroll-mt-24 overflow-hidden">
         <Image
           src={ctaImage}
           alt="Vasque en marbre veiné avec robinetterie laiton, devant une niche de zellige vert et crème et une vue sur la mer"

@@ -122,8 +122,9 @@ export function Collections() {
 
   return (
     <section
+      id="collections"
       style={{ backgroundColor: CREAM }}
-      className="px-6 py-24 sm:px-10 sm:py-32 lg:px-14"
+      className="scroll-mt-24 px-6 py-24 sm:px-10 sm:py-32 lg:px-14"
     >
       <div className="grid grid-cols-1 gap-4 lg:h-220 lg:grid-cols-3 lg:grid-rows-4 lg:gap-5">
         <motion.div

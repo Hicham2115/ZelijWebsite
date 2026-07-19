@@ -4,7 +4,12 @@ import { useEffect, useState } from "react";
 import { Menu } from "lucide-react";
 import { CREAM } from "@/lib/theme";
 
-const NAV_LINKS = ["Collections", "Story", "Journal"];
+const NAV_LINKS = [
+  { label: "Philosophy", href: "#philosophy" },
+  { label: "Collections", href: "#collections" },
+  { label: "Material & Craft", href: "#material-craft" },
+  { label: "Contact", href: "#contact" },
+];
 const SCROLL_THRESHOLD = 32;
 
 export function Header() {
@@ -38,11 +43,11 @@ export function Header() {
         >
           {NAV_LINKS.map((link) => (
             <a
-              key={link}
-              href="#"
+              key={link.label}
+              href={link.href}
               className={`uppercase transition-colors ${isLight ? "hover:text-white/60" : "hover:text-neutral-500"}`}
             >
-              {link}
+              {link.label}
             </a>
           ))}
         </nav>
@@ -59,7 +64,7 @@ export function Header() {
             About Us
           </a>
           <a
-            href="#"
+            href="#contact"
             className={`hidden border px-4 py-2 text-xs font-medium tracking-[0.15em] uppercase transition-colors lg:inline-flex ${
               isLight
                 ? "border-white/40 text-white hover:bg-white/10"

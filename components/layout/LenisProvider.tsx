@@ -3,5 +3,9 @@
 import { ReactLenis } from "lenis/react";
 
 export function LenisProvider({ children }: { children: React.ReactNode }) {
-  return <ReactLenis root>{children}</ReactLenis>;
+  return (
+    <ReactLenis root options={{ anchors: true }}>
+      {children}
+    </ReactLenis>
+  );
 }

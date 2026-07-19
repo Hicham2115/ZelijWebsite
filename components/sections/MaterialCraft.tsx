@@ -131,8 +131,9 @@ function CraftCard({
 export function MaterialCraft() {
   return (
     <section
+      id="material-craft"
       style={{ backgroundColor: CREAM }}
-      className="px-6 py-16 sm:px-10 sm:py-24 lg:px-14"
+      className="scroll-mt-24 px-6 py-16 sm:px-10 sm:py-24 lg:px-14"
     >
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.7fr)]">
         <motion.div

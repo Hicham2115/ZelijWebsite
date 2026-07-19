@@ -39,8 +39,9 @@ const FEATURES = [
 export function Philosophy() {
   return (
     <section
+      id="philosophy"
       style={{ backgroundColor: CREAM }}
-      className="relative overflow-hidden px-6 py-16 sm:px-10 sm:py-24 lg:px-14"
+      className="relative scroll-mt-24 overflow-hidden px-6 py-16 sm:px-10 sm:py-24 lg:px-14"
     >
       <span
         aria-hidden="true"
