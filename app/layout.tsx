@@ -21,7 +21,7 @@ const playfairDisplay = Playfair_Display({
 export const metadata: Metadata = {
   title: { default: "MAREA", template: "%s | MAREA" },
   description:
-    "MAREA designs bath fixtures and rituals for people who treat water as something to slow down for, not just use.",
+    "MAREA crafts marble surfaces and hand-cut Moroccan zellige for spaces that deserve to be lived in slowly, not just built.",
   openGraph: { type: "website" },
 };
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { Hammer, Leaf, Waves } from "lucide-react";
+import { Grid3x3, Hammer, Mountain } from "lucide-react";
 import { motion, type Variants } from "framer-motion";
 import { CREAM, TERRACOTTA } from "@/lib/theme";
 
@@ -20,19 +20,19 @@ const FEATURES = [
     icon: Hammer,
     title: "Craft",
     description:
-      "We craft in small runs with care and intention. Every curve, every detail, made to last.",
+      "We craft in small runs with care and intention. Every slab, every tile, cut and finished by hand.",
   },
   {
-    icon: Waves,
+    icon: Mountain,
     title: "Material Honesty",
     description:
-      "We use real materials, chosen for their beauty and their integrity.",
+      "We source real marble and clay, chosen for their beauty, weight, and origin.",
   },
   {
-    icon: Leaf,
-    title: "Calm by Design",
+    icon: Grid3x3,
+    title: "Timeless Pattern",
     description:
-      "We design for spaces that quiet the mind and restore the body.",
+      "Each zellige piece is hand-cut and laid to form patterns that endure for generations.",
   },
 ];
 
@@ -58,19 +58,19 @@ export function Philosophy() {
         </p>
 
         <h2 className="mt-6 font-serif text-6xl leading-[1.05] text-neutral-900 sm:text-7xl">
-          Ritual
+          Heritage
           <br />
-          over Routine.
+          over Haste.
         </h2>
 
         <p className="mt-8 text-base leading-relaxed text-neutral-500">
-          We believe the everyday can be extraordinary.
+          We believe surfaces shape how a space feels.
           <br />
-          Water is not just for use, it&apos;s for presence.
+          Marble is not just for building, it&apos;s for belonging.
           <br />
-          Our pieces are designed to turn ordinary moments
+          Our zellige is cut and glazed by hand,
           <br />
-          into quiet rituals you look forward to.
+          each tile carrying the mark of its maker.
         </p>
       </motion.div>
 
@@ -129,7 +129,7 @@ export function Philosophy() {
           style={{ color: TERRACOTTA }}
           className="text-[10px] font-medium tracking-[0.3em] uppercase"
         >
-          Water, Unhurried.
+          Stone, Unhurried.
         </span>
       </motion.div>
     </section>
