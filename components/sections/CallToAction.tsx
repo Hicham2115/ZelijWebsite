@@ -87,9 +87,9 @@ export function CallToAction() {
             variants={fadeUp}
             className="font-serif text-6xl leading-[1.05] text-white sm:text-7xl"
           >
-            Let&apos;s create
+            Cr&eacute;ons
             <br />
-            <span className="italic">your sanctuary.</span>
+            <span className="italic">votre sanctuaire.</span>
           </motion.h2>
 
           <motion.div
@@ -102,14 +102,14 @@ export function CallToAction() {
           >
             <span className="h-px w-10 bg-white/40" />
             <p className="text-base leading-relaxed text-white/80">
-              Timeless design. Natural materials.
+              Design intemporel. Mati&egrave;res naturelles.
               <br />
-              Spaces that restore what matters most.
+              Des espaces qui restaurent l&apos;essentiel.
             </p>
           </motion.div>
 
           <motion.a
-            href="#"
+            href="/contact"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
@@ -117,7 +117,7 @@ export function CallToAction() {
             variants={fadeUp}
             className="group inline-flex w-fit items-center gap-3 border-b border-white/40 pb-1 text-xs font-medium tracking-[0.15em] text-white uppercase transition-colors hover:border-white/70"
           >
-            Contact Us
+            Nous Contacter
             <ArrowRight
               className="h-4 w-4 transition-transform group-hover:translate-x-1"
               aria-hidden="true"
@@ -140,13 +140,14 @@ export function CallToAction() {
             className="flex flex-col gap-4"
           >
             <h3 className="font-serif text-4xl leading-[1.1] text-neutral-900 sm:text-5xl">
-              Stay inspired.
+              Restez inspir&eacute;(e).
               <br />
-              Timeless stories, delivered.
+              Des histoires intemporelles, livr&eacute;es.
             </h3>
             <p className="max-w-sm text-sm leading-relaxed text-neutral-500">
-              Subscribe to our newsletter for reflections on design,
-              materials, and rituals that shape the way we live.
+              Abonnez-vous &agrave; notre newsletter pour des r&eacute;flexions
+              sur le design, les mati&egrave;res et les rituels qui
+              fa&ccedil;onnent notre mani&egrave;re de vivre.
             </p>
           </motion.div>
 
@@ -169,7 +170,7 @@ export function CallToAction() {
                     type="email"
                     value={field.state.value}
                     onChange={(event) => field.handleChange(event.target.value)}
-                    placeholder="Enter your email"
+                    placeholder="Votre adresse e-mail"
                     aria-label="Adresse e-mail"
                     className="h-auto flex-1 rounded-none border-neutral-900/20 bg-transparent px-4 py-4 text-sm text-neutral-900 placeholder:text-neutral-400"
                   />
@@ -180,7 +181,7 @@ export function CallToAction() {
                 type="submit"
                 className="shrink-0 bg-neutral-900 px-8 py-4 text-xs font-medium tracking-[0.15em] text-white uppercase transition-colors hover:bg-neutral-800"
               >
-                Subscribe
+                S&apos;abonner
               </button>
             </div>
 
@@ -195,12 +196,10 @@ export function CallToAction() {
                     className="mt-0.5 rounded-[3px] border-neutral-900/30"
                   />
                   <span>
-                    I agree to receive MAREA updates and accept the{" "}
+                    J&apos;accepte de recevoir les actualit&eacute;s MAREA et
+                    j&apos;accepte la{" "}
                     <a href="#" className="underline underline-offset-2">
-                      Privacy
-                    </a>{" "}
-                    <a href="#" className="underline underline-offset-2">
-                      Policy
+                      Politique de Confidentialit&eacute;
                     </a>
                     .
                   </span>

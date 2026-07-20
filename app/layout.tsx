@@ -25,7 +25,7 @@ const playfairDisplay = Playfair_Display({
 export const metadata: Metadata = {
   title: { default: "MAREA", template: "%s | MAREA" },
   description:
-    "MAREA crafts marble surfaces and hand-cut Moroccan zellige for spaces that deserve to be lived in slowly, not just built.",
+    "MAREA façonne des surfaces en marbre et du zellige marocain taillé à la main, pour des espaces à vivre lentement, pas seulement à construire.",
   openGraph: { type: "website" },
 };
 
@@ -36,7 +36,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="fr"
       className={`${geistSans.variable} ${geistMono.variable} ${playfairDisplay.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">

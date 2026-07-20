@@ -1,27 +1,34 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { Menu } from "lucide-react";
 import { CREAM } from "@/lib/theme";
+import Link from "next/link";
 
 const NAV_LINKS = [
-  { label: "Philosophy", href: "#philosophy" },
+  { label: "Philosophie", href: "#philosophy" },
   { label: "Collections", href: "#collections" },
-  { label: "Material & Craft", href: "#material-craft" },
-  { label: "Contact", href: "#contact" },
+  { label: "Matière & Savoir-faire", href: "#material-craft" },
+  { label: "Contact", href: "/contact" },
 ];
 const SCROLL_THRESHOLD = 32;
 
 export function Header() {
-  const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+  const [scrolledPastThreshold, setScrolledPastThreshold] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > SCROLL_THRESHOLD);
+    if (!isHome) return;
+
+    const onScroll = () => setScrolledPastThreshold(window.scrollY > SCROLL_THRESHOLD);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [isHome]);
 
+  const scrolled = !isHome || scrolledPastThreshold;
   const isLight = !scrolled;
 
   return (
@@ -32,11 +39,13 @@ export function Header() {
       }`}
     >
       <div className="flex items-center justify-between px-6 py-6 sm:px-10 lg:px-14">
-        <span
-          className={`text-lg font-semibold tracking-[0.25em] transition-colors duration-300 ${isLight ? "text-white" : "text-neutral-900"}`}
-        >
-          MAREA
-        </span>
+        <Link href="/">
+          <span
+            className={`text-lg font-semibold tracking-[0.25em] transition-colors duration-300 ${isLight ? "text-white" : "text-neutral-900"}`}
+          >
+            MAREA
+          </span>
+        </Link>
 
         <nav
           className={`hidden items-center gap-9 text-xs font-medium tracking-[0.15em] transition-colors duration-300 lg:flex ${isLight ? "text-white/90" : "text-neutral-800"}`}
@@ -61,17 +70,17 @@ export function Header() {
                 : "border-neutral-900/20 text-neutral-900 hover:bg-neutral-900/5"
             }`}
           >
-            About Us
+            À Propos
           </a>
           <a
-            href="#contact"
+            href="/contact"
             className={`hidden border px-4 py-2 text-xs font-medium tracking-[0.15em] uppercase transition-colors lg:inline-flex ${
               isLight
                 ? "border-white/40 text-white hover:bg-white/10"
                 : "border-neutral-900/20 text-neutral-900 hover:bg-neutral-900/5"
             }`}
           >
-            Contact Us
+            Nous Contacter
           </a>
 
           <button

@@ -18,21 +18,21 @@ const fadeUp: Variants = {
 const FEATURES = [
   {
     icon: Hammer,
-    title: "Craft",
+    title: "Savoir-faire",
     description:
-      "We craft in small runs with care and intention. Every slab, every tile, cut and finished by hand.",
+      "Nous fabriquons en petites séries, avec soin et intention. Chaque dalle, chaque carreau, taillé et fini à la main.",
   },
   {
     icon: Mountain,
-    title: "Material Honesty",
+    title: "Honnêteté des matières",
     description:
-      "We source real marble and clay, chosen for their beauty, weight, and origin.",
+      "Nous sourçons un marbre et une argile authentiques, choisis pour leur beauté, leur poids et leur origine.",
   },
   {
     icon: Grid3x3,
-    title: "Timeless Pattern",
+    title: "Motif intemporel",
     description:
-      "Each zellige piece is hand-cut and laid to form patterns that endure for generations.",
+      "Chaque pièce de zellige est taillée à la main et posée pour former des motifs qui traversent les générations.",
   },
 ];
 
@@ -63,23 +63,23 @@ export function Philosophy() {
           style={{ color: TERRACOTTA }}
           className="text-xs font-medium tracking-[0.3em] uppercase"
         >
-          02 &mdash; Philosophy
+          02 &mdash; Philosophie
         </p>
 
         <h2 className="mt-6 font-serif text-6xl leading-[1.05] text-neutral-900 sm:text-7xl lg:text-8xl">
-          Heritage
+          H&eacute;ritage
           <br />
-          <span className="italic">over Haste.</span>
+          <span className="italic">plut&ocirc;t que h&acirc;te.</span>
         </h2>
 
         <p className="mt-8 text-base leading-relaxed text-neutral-500">
-          We believe surfaces shape how a space feels.
+          Nous croyons que les surfaces fa&ccedil;onnent l&apos;atmosph&egrave;re d&apos;un lieu.
           <br />
-          Marble is not just for building, it&apos;s for belonging.
+          Le marbre ne sert pas qu&apos;&agrave; b&acirc;tir, il sert &agrave; habiter.
           <br />
-          Our zellige is cut and glazed by hand,
+          Notre zellige est taill&eacute; et &eacute;maill&eacute; &agrave; la main,
           <br />
-          each tile carrying the mark of its maker.
+          chaque carreau portant la marque de son artisan.
         </p>
       </motion.div>
 

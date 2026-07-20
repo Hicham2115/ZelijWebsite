@@ -129,3 +129,28 @@
     @apply font-sans;
   }
 }
+
+/* Scrollbar — matches the MAREA cream / terracotta palette (lib/theme.ts) */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #b2693f #faf7ef;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #faf7ef;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #b2693f;
+  border-radius: 9999px;
+  border: 3px solid #faf7ef;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #14322b;
+}

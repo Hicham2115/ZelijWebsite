@@ -20,12 +20,12 @@ import { emailSchema } from "@/lib/schemas";
 const MOSAIC_GREEN = "#1F3B30";
 const MOSAIC_CREAM = "#D9C7A1";
 
-const TAGLINES = ["Marble.", "Zelij.", "Atmosphere.", "Intention."];
+const TAGLINES = ["Marbre.", "Zelij.", "Atmosphère.", "Intention."];
 
 const LINK_COLUMNS = [
   {
-    heading: "Explore",
-    links: ["Collections", "Marble", "Zellij", "Projects", "About MAREA"],
+    heading: "Explorer",
+    links: ["Collections", "Marbre", "Zellij", "Projets", "À Propos de MAREA"],
   },
   // {
   //   heading: "Information",
@@ -38,8 +38,14 @@ const LINK_COLUMNS = [
   //   ],
   // },
   {
-    heading: "Company",
-    links: ["Our Story", "Careers", "Press", "Trade Program", "Contact"],
+    heading: "Entreprise",
+    links: [
+      "Notre Histoire",
+      "Carrières",
+      "Presse",
+      "Programme Professionnel",
+      "Contact",
+    ],
   },
 ];
 
@@ -47,10 +53,14 @@ const SOCIALS = [
   { icon: Camera, label: "Instagram" },
   { icon: Globe, label: "Pinterest" },
   { icon: Briefcase, label: "LinkedIn" },
-  { icon: Mail, label: "Email" },
+  { icon: Mail, label: "E-mail" },
 ];
 
-const LEGAL_LINKS = ["Privacy Policy", "Terms & Conditions", "Cookies"];
+const LEGAL_LINKS = [
+  "Politique de Confidentialité",
+  "Conditions Générales",
+  "Cookies",
+];
 
 function ZelligeStar({ className }: { className?: string }) {
   return (
@@ -114,29 +124,31 @@ function ZelligeDiamond({ className }: { className?: string }) {
 const VALUES = [
   {
     icon: ZelligeStar,
-    label: "Natural Materials",
+    label: "Matières Naturelles",
     description:
-      "Carefully selected marble and authentic zellij. Made to last.",
+      "Marbre soigneusement sélectionné et zellige authentique. Fait pour durer.",
   },
   {
     icon: ZelligeDiamond,
-    label: "Tradition & Craft",
-    description: "Rooted in Moroccan craftsmanship and heritage.",
+    label: "Tradition & Savoir-faire",
+    description: "Ancré dans l'artisanat et l'héritage marocains.",
   },
   {
     icon: Leaf,
-    label: "Sustainable Choice",
-    description: "Responsible sourcing for a more beautiful future.",
+    label: "Choix Durable",
+    description: "Un approvisionnement responsable pour un avenir plus beau.",
   },
   {
     icon: Hand,
-    label: "Made with Care",
-    description: "Attention to detail in every piece and finishing.",
+    label: "Fait avec Soin",
+    description:
+      "Une attention portée au détail, dans chaque pièce et chaque finition.",
   },
   {
     icon: ZelligeStar,
-    label: "Spaces That Inspire",
-    description: "Timeless design for spaces that feel calm and meaningful.",
+    label: "Des Espaces qui Inspirent",
+    description:
+      "Un design intemporel pour des espaces calmes et porteurs de sens.",
   },
 ];
 
@@ -217,8 +229,8 @@ export function Footer() {
               ))}
             </p> */}
             <p className=" text-sm leading-relaxed text-neutral-600">
-              MAREA creates timeless spaces where natural marble and traditional
-              zellij come together in perfect harmony.
+              MAREA crée des espaces intemporels où marbre naturel et zellige
+              traditionnel s&apos;unissent en parfaite harmonie.
             </p>
           </div>
         </div>
@@ -235,10 +247,11 @@ export function Footer() {
 
           <div className="lg:pl-8">
             <p className="text-xs font-medium tracking-[0.2em] text-neutral-900/60 uppercase">
-              Connect
+              Suivez-nous
             </p>
             <p className="mt-6 max-w-52 text-sm leading-relaxed text-neutral-600">
-              Thoughtful updates. New collections. Design inspiration. No noise.
+              Des actualités pensées. Nouvelles collections. Inspiration design.
+              Sans superflu.
             </p>
 
             <form
@@ -254,7 +267,7 @@ export function Footer() {
                     type="email"
                     value={field.state.value}
                     onChange={(event) => field.handleChange(event.target.value)}
-                    placeholder="Your email"
+                    placeholder="Votre e-mail"
                     aria-label="Adresse e-mail"
                     className="h-auto flex-1 rounded-none border-0 bg-transparent p-0 text-sm text-neutral-900 placeholder:text-neutral-400 focus-visible:ring-0"
                   />
@@ -285,7 +298,7 @@ export function Footer() {
         </div>
       </div>
 
-      <div
+      {/* <div
         style={{ backgroundColor: CREAM }}
         className="relative border-t border-neutral-900/10"
       >
@@ -310,7 +323,7 @@ export function Footer() {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
     </footer>
   );
 }

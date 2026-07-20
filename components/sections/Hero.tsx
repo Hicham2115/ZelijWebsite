@@ -22,7 +22,7 @@ export function Hero() {
     <section className="relative min-h-screen overflow-hidden">
       <Image
         src={heroImage}
-        alt="Marble slabs and hand-glazed zellige tile leaning against a sunlit courtyard wall"
+        alt="Dalles de marbre et zellige émaillé à la main, appuyés contre un mur de patio ensoleillé"
         fill
         sizes="100vw"
         preload
@@ -116,7 +116,7 @@ export function Hero() {
             className="flex flex items-start gap-3 text-white/60"
           >
             <span className="text-[10px] font-medium tracking-[0.25em] uppercase">
-              Scroll
+              Défiler
             </span>
             <ArrowDown className="h-4 w-4" aria-hidden="true" />
           </motion.div>

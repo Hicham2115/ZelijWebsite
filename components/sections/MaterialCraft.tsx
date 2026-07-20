@@ -25,9 +25,9 @@ const fadeUp: Variants = {
 const CRAFT_CARDS = [
   {
     index: "01",
-    label: "Marble",
+    label: "Marbre",
     description:
-      "Sourced for its purity and strength. Every piece is unique, just like nature.",
+      "Sélectionné pour sa pureté et sa résistance. Chaque pièce est unique, comme la nature.",
     icon: Gem,
     image: marbleCardImg,
     alt: "Gros plan sur l'arête d'une dalle de marbre beige veinée d'or",
@@ -36,16 +36,16 @@ const CRAFT_CARDS = [
     index: "02",
     label: "Zelij",
     description:
-      "Handcrafted by Moroccan artisans. Timeless patterns, shaped by tradition.",
+      "Fabriqué à la main par des artisans marocains. Des motifs intemporels, façonnés par la tradition.",
     icon: Sparkle,
     image: zelijCardImg,
     alt: "Mosaïque de zellige en étoile, verte et crème, vue de près",
   },
   {
     index: "03",
-    label: "Marble",
+    label: "Marbre",
     description:
-      "Smooth to touch, easy to live with. Engineered for everyday rituals.",
+      "Doux au toucher, facile à vivre. Pensé pour les rituels du quotidien.",
     icon: Amphora,
     image: marbleCard2Img,
     alt: "Boîte ronde en marbre avec couvercle et poignée en laiton",
@@ -54,7 +54,7 @@ const CRAFT_CARDS = [
     index: "04",
     label: "Zelij",
     description:
-      "Selected for warmth and character. Designed to complement water, not compete.",
+      "Choisi pour sa chaleur et son caractère. Pensé pour sublimer l'eau, sans jamais lui faire concurrence.",
     icon: Flower2,
     image: zelijCard2Img,
     alt: "Plateau en marbre incrusté d'un motif de zellige en étoile, vert et crème",
@@ -149,15 +149,15 @@ export function MaterialCraft() {
               style={{ color: TERRACOTTA }}
               className="text-xs font-medium tracking-[0.3em] uppercase"
             >
-              04 &mdash; Material &amp; Craft
+              04 &mdash; Mati&egrave;re &amp; Savoir-faire
             </p>
 
             <h2 className="mt-6 font-serif text-5xl leading-[1.05] text-neutral-900 sm:text-6xl">
-              Made from
+              Fa&ccedil;onn&eacute; en
               <br />
-              honest materials.
+              mati&egrave;res honn&ecirc;tes.
               <br />
-              <span className="italic">Crafted with care.</span>
+              <span className="italic">Cr&eacute;&eacute; avec soin.</span>
             </h2>
 
             <span
@@ -166,9 +166,10 @@ export function MaterialCraft() {
             />
 
             <p className="mt-6 max-w-xs text-base leading-relaxed text-neutral-500">
-              We believe beauty starts with what&apos;s real. Natural
-              materials, traditional techniques, and a slower way of making
-              &mdash; that&apos;s the MAREA way.
+              Nous croyons que la beaut&eacute; commence par ce qui est vrai.
+              Des mati&egrave;res naturelles, des techniques traditionnelles,
+              et une mani&egrave;re de cr&eacute;er plus lente &mdash;
+              c&apos;est la voie MAREA.
             </p>
           </div>
 
@@ -176,7 +177,7 @@ export function MaterialCraft() {
             href="#"
             className="group inline-flex w-fit items-center gap-3 border-b border-neutral-900/30 pb-1 text-xs font-medium tracking-[0.15em] text-neutral-900 uppercase transition-colors hover:border-neutral-900/60"
           >
-            Our Craft Process
+            Notre Processus Artisanal
             <ArrowRight
               className="h-4 w-4 transition-transform group-hover:translate-x-1"
               aria-hidden="true"
@@ -206,8 +207,9 @@ export function MaterialCraft() {
           />
 
           <p className="absolute right-6 bottom-6 max-w-56 text-right text-xs leading-relaxed text-white/90 sm:right-10 sm:bottom-10">
-            Real materials age beautifully. They develop character over
-            time, just like the spaces they live in.
+            Les mati&egrave;res vraies vieillissent avec grâce. Elles
+            d&eacute;veloppent du caract&egrave;re avec le temps, tout comme
+            les espaces qu&apos;elles habitent.
           </p>
         </motion.div>
       </div>
@@ -234,9 +236,9 @@ export function MaterialCraft() {
           style={{ color: TERRACOTTA }}
           className="flex flex-wrap items-center justify-center gap-x-3 text-center text-[11px] font-medium tracking-[0.2em] uppercase"
         >
-          <span>Quiet Materials.</span>
-          <span>Intentional Design.</span>
-          <span>Lasting Beauty.</span>
+          <span>Mati&egrave;res Silencieuses.</span>
+          <span>Design Intentionnel.</span>
+          <span>Beaut&eacute; Durable.</span>
         </p>
 
         <span className="font-serif text-lg tracking-[0.3em] text-neutral-900">
