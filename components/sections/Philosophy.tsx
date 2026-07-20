@@ -68,16 +68,18 @@ export function Philosophy() {
 
         <h2 className="mt-6 font-serif text-6xl leading-[1.05] text-neutral-900 sm:text-7xl lg:text-8xl">
           H&eacute;ritage
-          <br />
           <span className="italic">plut&ocirc;t que h&acirc;te.</span>
         </h2>
 
         <p className="mt-8 text-base leading-relaxed text-neutral-500">
-          Nous croyons que les surfaces fa&ccedil;onnent l&apos;atmosph&egrave;re d&apos;un lieu.
+          Nous croyons que les surfaces fa&ccedil;onnent
+          l&apos;atmosph&egrave;re d&apos;un lieu.
           <br />
-          Le marbre ne sert pas qu&apos;&agrave; b&acirc;tir, il sert &agrave; habiter.
+          Le marbre ne sert pas qu&apos;&agrave; b&acirc;tir, il sert &agrave;
+          habiter.
           <br />
-          Notre zellige est taill&eacute; et &eacute;maill&eacute; &agrave; la main,
+          Notre zellige est taill&eacute; et &eacute;maill&eacute; &agrave; la
+          main,
           <br />
           chaque carreau portant la marque de son artisan.
         </p>

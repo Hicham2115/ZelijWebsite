@@ -63,7 +63,7 @@ export function Header() {
 
         <div className="flex items-center gap-3">
           <a
-            href="#"
+            href="/about"
             className={`hidden border px-4 py-2 text-xs font-medium tracking-[0.15em] uppercase transition-colors lg:inline-flex ${
               isLight
                 ? "border-white/40 text-white hover:bg-white/10"
