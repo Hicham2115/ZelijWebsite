@@ -25,7 +25,7 @@ const TAGLINES = ["Marbre.", "Zelij.", "Atmosphère.", "Intention."];
 const LINK_COLUMNS = [
   {
     heading: "Explorer",
-    links: ["Collections", "Marbre", "Zellij", "Projets", "À Propos de MAREA"],
+    links: ["Collections", "Marbre", "Zellij", "Projets", "À Propos d'Arte Piedra"],
   },
   // {
   //   heading: "Information",
@@ -220,7 +220,7 @@ export function Footer() {
 
           <div className="relative z-10 flex flex-col gap-6">
             <span className="font-serif text-4xl tracking-[0.3em] text-neutral-900">
-              MAREA
+              ARTE PIEDRA
             </span>
             <span className="h-px w-10 bg-neutral-900/30" />
             {/* <p className="flex flex-col gap-1 text-xs font-medium tracking-[0.25em] text-neutral-900/80 uppercase">
@@ -229,7 +229,7 @@ export function Footer() {
               ))}
             </p> */}
             <p className=" text-sm leading-relaxed text-neutral-600">
-              MAREA crée des espaces intemporels où marbre naturel et zellige
+              Arte Piedra crée des espaces intemporels où marbre naturel et zellige
               traditionnel s&apos;unissent en parfaite harmonie.
             </p>
           </div>

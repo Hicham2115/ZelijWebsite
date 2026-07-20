@@ -74,7 +74,7 @@ export function CallToAction() {
             className="flex items-center gap-3 text-white"
           >
             <span className="text-xs font-medium tracking-[0.3em] uppercase">
-              Marea
+              Arte Piedra
             </span>
             <span className="h-px w-8 bg-white/50" />
           </motion.div>
@@ -196,7 +196,7 @@ export function CallToAction() {
                     className="mt-0.5 rounded-[3px] border-neutral-900/30"
                   />
                   <span>
-                    J&apos;accepte de recevoir les actualit&eacute;s MAREA et
+                    J&apos;accepte de recevoir les actualit&eacute;s Arte Piedra et
                     j&apos;accepte la{" "}
                     <a href="#" className="underline underline-offset-2">
                       Politique de Confidentialit&eacute;

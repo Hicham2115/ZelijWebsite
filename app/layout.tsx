@@ -23,9 +23,9 @@ const playfairDisplay = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: { default: "MAREA", template: "%s | MAREA" },
+  title: { default: "Arte Piedra", template: "%s | Arte Piedra" },
   description:
-    "MAREA façonne des surfaces en marbre et du zellige marocain taillé à la main, pour des espaces à vivre lentement, pas seulement à construire.",
+    "Arte Piedra façonne des surfaces en marbre et du zellige marocain taillé à la main, pour des espaces à vivre lentement, pas seulement à construire.",
   openGraph: { type: "website" },
 };
 

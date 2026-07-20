@@ -146,7 +146,7 @@ export function Philosophy() {
         className="relative mx-auto mt-14 flex max-w-5xl flex-col items-center gap-4 border-t border-neutral-900/10 pt-10"
       >
         <span className="font-serif text-2xl tracking-[0.3em] text-neutral-900">
-          MAREA
+          ARTE PIEDRA
         </span>
         <span
           style={{ color: TERRACOTTA }}

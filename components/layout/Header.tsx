@@ -44,7 +44,7 @@ export function Header() {
           <span
             className={`text-lg font-semibold tracking-[0.25em] transition-colors duration-300 ${isLight ? "text-white" : "text-neutral-900"}`}
           >
-            MAREA
+            ARTE PIEDRA
           </span>
         </Link>
 

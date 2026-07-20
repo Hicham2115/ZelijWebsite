@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-MAREA — a single-page French/English marketing site for a Moroccan marble & zellige (zellij tile) studio. Built with Next.js 16 (App Router), React 19, and Tailwind CSS v4. There is no backend/API layer in this repo; it's a static marketing page composed of full-width scroll sections.
+Arte Piedra — a single-page French/English marketing site for a Moroccan marble & zellige (zellij tile) studio. Built with Next.js 16 (App Router), React 19, and Tailwind CSS v4. There is no backend/API layer in this repo; it's a static marketing page composed of full-width scroll sections.
 
 ## Commands
 
@@ -31,7 +31,7 @@ There is no test suite configured in this repo (no Jest/Vitest/Playwright).
 
 Brand colors live in `lib/theme.ts` as raw hex string constants (`CREAM`, `FOREST`, `TERRACOTTA`, `INK`) and are applied via inline `style={{ backgroundColor: ... }}` / `style={{ color: ... }}`, not Tailwind color classes. This is the established pattern throughout every section — follow it for new brand-colored elements rather than adding Tailwind utility colors or CSS variables for these four colors. Tailwind is still used for everything else (layout, spacing, typography, hover/focus states).
 
-`app/globals.css` layers `tailwindcss` → `tw-animate-css` → `shadcn/tailwind.css`, then defines the shadcn/base-ui CSS-variable theme (`--background`, `--primary`, etc., in oklch) for the `components/ui/*` primitives. Those CSS variables are a separate system from the four MAREA brand constants above — don't conflate them.
+`app/globals.css` layers `tailwindcss` → `tw-animate-css` → `shadcn/tailwind.css`, then defines the shadcn/base-ui CSS-variable theme (`--background`, `--primary`, etc., in oklch) for the `components/ui/*` primitives. Those CSS variables are a separate system from the four Arte Piedra brand constants above — don't conflate them.
 
 ### UI primitives: base-ui, not Radix
 

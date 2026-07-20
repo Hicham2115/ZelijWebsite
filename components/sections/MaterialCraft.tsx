@@ -169,7 +169,7 @@ export function MaterialCraft() {
               Nous croyons que la beaut&eacute; commence par ce qui est vrai.
               Des mati&egrave;res naturelles, des techniques traditionnelles,
               et une mani&egrave;re de cr&eacute;er plus lente &mdash;
-              c&apos;est la voie MAREA.
+              c&apos;est la voie Arte Piedra.
             </p>
           </div>
 
@@ -229,7 +229,7 @@ export function MaterialCraft() {
         className="mt-8 flex flex-col items-center gap-6 border-t border-neutral-900/10 pt-8 sm:flex-row sm:justify-between"
       >
         <div className="flex h-10 w-10 items-center justify-center rounded-full border border-neutral-900/20 font-serif text-sm text-neutral-900">
-          M
+          A
         </div>
 
         <p
@@ -242,7 +242,7 @@ export function MaterialCraft() {
         </p>
 
         <span className="font-serif text-lg tracking-[0.3em] text-neutral-900">
-          MAREA
+          ARTE PIEDRA
         </span>
       </motion.div>
     </section>

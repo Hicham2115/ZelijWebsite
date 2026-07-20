@@ -5,7 +5,7 @@ import { CREAM } from "@/lib/theme";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Découvrez l'atelier MAREA : marbre et zellige marocain façonnés à la main pour des espaces intemporels.",
+    "Découvrez l'atelier Arte Piedra : marbre et zellige marocain façonnés à la main pour des espaces intemporels.",
 };
 
 export default function AboutPage() {

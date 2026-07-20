@@ -24,7 +24,7 @@ const fadeUp: Variants = {
 
 const CONTACT_DETAILS = [
   { icon: MapPin, value: "Marrakech, Morocco" },
-  { icon: Mail, value: "hello@marea-studio.com" },
+  { icon: Mail, value: "hello@artepiedra-studio.com" },
   { icon: Phone, value: "+212 6 12 34 56 78" },
 ];
 
