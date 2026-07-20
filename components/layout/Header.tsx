@@ -7,9 +7,9 @@ import { CREAM } from "@/lib/theme";
 import Link from "next/link";
 
 const NAV_LINKS = [
-  { label: "Philosophie", href: "#philosophy" },
-  { label: "Collections", href: "#collections" },
-  { label: "Matière & Savoir-faire", href: "#material-craft" },
+  { label: "Philosophie", href: "/#philosophy" },
+  { label: "Collections", href: "/#collections" },
+  { label: "Matière & Savoir-faire", href: "/#material-craft" },
   { label: "Contact", href: "/contact" },
 ];
 const SCROLL_THRESHOLD = 32;
@@ -22,7 +22,8 @@ export function Header() {
   useEffect(() => {
     if (!isHome) return;
 
-    const onScroll = () => setScrolledPastThreshold(window.scrollY > SCROLL_THRESHOLD);
+    const onScroll = () =>
+      setScrolledPastThreshold(window.scrollY > SCROLL_THRESHOLD);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -86,7 +87,9 @@ export function Header() {
           <button
             type="button"
             className={`flex items-center gap-2 text-xs font-medium tracking-[0.15em] uppercase transition-colors lg:hidden ${
-              isLight ? "text-white/90 hover:text-white/60" : "text-neutral-800 hover:text-neutral-500"
+              isLight
+                ? "text-white/90 hover:text-white/60"
+                : "text-neutral-800 hover:text-neutral-500"
             }`}
           >
             <span className="hidden sm:inline">Menu</span>
