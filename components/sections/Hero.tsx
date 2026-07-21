@@ -1,9 +1,10 @@
 "use client";
 
-import Image from "next/image";
+import { getImageProps } from "next/image";
 import { ArrowDown, ArrowRight } from "lucide-react";
 import { motion, type Variants } from "framer-motion";
 import heroImage from "@/app/assets/hero.png";
+import heroMobileImage from "@/app/assets/heromobile.png";
 import { FOREST } from "@/lib/theme";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -17,17 +18,35 @@ const fadeUp: Variants = {
   }),
 };
 
+const HERO_ALT =
+  "Dalles de marbre et zellige émaillé à la main, appuyés contre un mur de patio ensoleillé";
+
+// `<picture>` + `getImageProps` art direction: the browser fetches only the
+// matching source, so above-the-fold priority (fetchPriority) works without
+// double-loading both images — see next/image docs "Art direction".
+const commonHeroImageProps = {
+  alt: HERO_ALT,
+  sizes: "100vw",
+  fetchPriority: "high" as const,
+  loading: "eager" as const,
+};
+
+const {
+  props: { srcSet: desktopHeroSrcSet },
+} = getImageProps({ ...commonHeroImageProps, src: heroImage });
+
+const { props: mobileHeroImgProps } = getImageProps({
+  ...commonHeroImageProps,
+  src: heroMobileImage,
+});
+
 export function Hero() {
   return (
     <section className="relative min-h-screen overflow-hidden">
-      <Image
-        src={heroImage}
-        alt="Dalles de marbre et zellige émaillé à la main, appuyés contre un mur de patio ensoleillé"
-        fill
-        sizes="100vw"
-        preload
-        className="object-cover"
-      />
+      <picture className="absolute inset-0 block h-full w-full">
+        <source media="(min-width: 640px)" srcSet={desktopHeroSrcSet} />
+        <img {...mobileHeroImgProps} className="h-full w-full object-cover" />
+      </picture>
 
       <div
         aria-hidden="true"
