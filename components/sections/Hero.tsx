@@ -48,13 +48,13 @@ export function Hero() {
       />
 
       <div className="relative z-10 flex min-h-screen flex-col">
-        <div className="flex flex-1 flex-col justify-center gap-10 px-6 py-32 sm:px-10 lg:px-14 lg:py-0">
+        <div className="flex flex-1 flex-col justify-center gap-8 px-6 py-20 sm:gap-10 sm:px-10 sm:py-28 lg:px-14 lg:py-0">
           <motion.h1
             initial="hidden"
             animate="visible"
             custom={0}
             variants={fadeUp}
-            className="font-serif mt-28 text-7xl leading-[1.05] tracking-[0.06em] text-white uppercase sm:text-8xl lg:text-8xl"
+            className="font-serif mt-12 text-6xl leading-[1.05] tracking-[0.06em] text-white uppercase sm:mt-20 sm:text-8xl lg:mt-28 lg:text-8xl"
           >
             Marbre.
             <br />
