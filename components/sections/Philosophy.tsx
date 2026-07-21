@@ -66,8 +66,9 @@ export function Philosophy() {
           02 &mdash; Philosophie
         </p>
 
-        <h2 className="mt-6 font-serif text-6xl leading-[1.05] text-neutral-900 sm:text-7xl lg:text-8xl">
+        <h2 className="mt-6 font-serif text-5xl leading-[1.05] text-neutral-900 sm:text-7xl lg:text-8xl">
           H&eacute;ritage
+          <br />
           <span className="italic">plut&ocirc;t que h&acirc;te.</span>
         </h2>
 
