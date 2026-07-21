@@ -45,7 +45,11 @@ export function Hero() {
     <section className="relative min-h-screen overflow-hidden">
       <picture className="absolute inset-0 block h-full w-full">
         <source media="(min-width: 640px)" srcSet={desktopHeroSrcSet} />
-        <img {...mobileHeroImgProps} className="h-full w-full object-cover" />
+        <img
+          {...mobileHeroImgProps}
+          alt={HERO_ALT}
+          className="h-full w-full object-cover"
+        />
       </picture>
 
       <div
