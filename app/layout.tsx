@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { LenisProvider } from "@/components/layout/LenisProvider";
+import { LoadingScreen } from "@/components/layout/LoadingScreen";
 import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
 
@@ -40,6 +41,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${playfairDisplay.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <LoadingScreen />
         <LenisProvider>
           <Header />
           {children}
