@@ -78,13 +78,14 @@ const CARDS: Card[] = [
 
 function CollectionCard({ card, delay }: { card: Card; delay: number }) {
   return (
-    <motion.div
+    <motion.a
+      href="/collections"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-80px" }}
       custom={delay}
       variants={fadeUp}
-      className={`group relative h-64 overflow-hidden rounded-2xl sm:h-80 lg:h-auto ${card.area}`}
+      className={`group relative block h-64 overflow-hidden rounded-2xl sm:h-80 lg:h-auto ${card.area}`}
     >
       <Image
         src={card.image}
@@ -113,7 +114,7 @@ function CollectionCard({ card, delay }: { card: Card; delay: number }) {
           aria-hidden="true"
         />
       </div>
-    </motion.div>
+    </motion.a>
   );
 }
 
@@ -156,7 +157,7 @@ export function Collections() {
           </div>
 
           <a
-            href="#"
+            href="/collections"
             className="group inline-flex w-fit items-center gap-3 border-b border-neutral-900/30 pb-1 text-xs font-medium tracking-[0.15em] text-neutral-900 uppercase transition-colors hover:border-neutral-900/60"
           >
             Voir toutes les collections
