@@ -167,22 +167,19 @@ export function MaterialCraft() {
 
             <p className="mt-6 max-w-xs text-base leading-relaxed text-neutral-500">
               Nous croyons que la beaut&eacute; commence par ce qui est vrai.
-              Des mati&egrave;res naturelles, des techniques traditionnelles,
-              et une mani&egrave;re de cr&eacute;er plus lente &mdash;
-              c&apos;est la voie Arte Piedra.
+              Des mati&egrave;res naturelles, des techniques traditionnelles, et
+              une mani&egrave;re de cr&eacute;er plus lente &mdash; c&apos;est
+              la voie Arte Piedra.
             </p>
           </div>
 
-          <a
-            href="#"
-            className="group inline-flex w-fit items-center gap-3 border-b border-neutral-900/30 pb-1 text-xs font-medium tracking-[0.15em] text-neutral-900 uppercase transition-colors hover:border-neutral-900/60"
-          >
+          <div className="group inline-flex w-fit items-center gap-3 border-b border-neutral-900/30 pb-1 text-xs font-medium tracking-[0.15em] text-neutral-900 uppercase transition-colors hover:border-neutral-900/60">
             Notre Processus Artisanal
             <ArrowRight
               className="h-4 w-4 transition-transform group-hover:translate-x-1"
               aria-hidden="true"
             />
-          </a>
+          </div>
         </motion.div>
 
         <motion.div
@@ -208,8 +205,8 @@ export function MaterialCraft() {
 
           <p className="absolute right-6 bottom-6 max-w-56 text-right text-xs leading-relaxed text-white/90 sm:right-10 sm:bottom-10">
             Les mati&egrave;res vraies vieillissent avec grâce. Elles
-            d&eacute;veloppent du caract&egrave;re avec le temps, tout comme
-            les espaces qu&apos;elles habitent.
+            d&eacute;veloppent du caract&egrave;re avec le temps, tout comme les
+            espaces qu&apos;elles habitent.
           </p>
         </motion.div>
       </div>

@@ -9,7 +9,7 @@ import Link from "next/link";
 
 const NAV_LINKS = [
   { label: "Philosophie", href: "/#philosophy" },
-  { label: "Collections", href: "/#collections" },
+  { label: "Collections", href: "/collections" },
   { label: "Matière & Savoir-faire", href: "/#material-craft" },
   { label: "Contact", href: "/contact" },
 ];
@@ -66,7 +66,7 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <a
+          {/* <a
             href="/about"
             className={`hidden border px-4 py-2 text-xs font-medium tracking-[0.15em] uppercase transition-colors lg:inline-flex ${
               isLight
@@ -75,7 +75,7 @@ export function Header() {
             }`}
           >
             À Propos
-          </a>
+          </a> */}
           <a
             href="/contact"
             className={`hidden border px-4 py-2 text-xs font-medium tracking-[0.15em] uppercase transition-colors lg:inline-flex ${
@@ -99,7 +99,9 @@ export function Header() {
                 : "text-neutral-800 hover:text-neutral-500"
             }`}
           >
-            <span className="hidden sm:inline">{menuOpen ? "Fermer" : "Menu"}</span>
+            <span className="hidden sm:inline">
+              {menuOpen ? "Fermer" : "Menu"}
+            </span>
             {menuOpen ? (
               <X className="h-4 w-4" aria-hidden="true" />
             ) : (

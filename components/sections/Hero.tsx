@@ -118,10 +118,10 @@ export function Hero() {
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </a>
             <a
-              href="/about"
+              href="/#philosophy"
               className="border border-white/30 px-6 py-4 text-xs font-medium tracking-[0.15em] text-white uppercase transition-colors hover:border-white/60"
             >
-              Notre histoire
+              Notre Philosophie
             </a>
           </motion.div>
         </div>
