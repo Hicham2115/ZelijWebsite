@@ -125,7 +125,7 @@ export function Collections() {
     <section
       id="collections"
       style={{ backgroundColor: CREAM }}
-      className="scroll-mt-24 px-6 py-24 sm:px-10 sm:py-32 lg:px-14"
+      className="scroll-mt-24 -mt-20 px-6 py-24 sm:px-10 sm:py-32 lg:px-14"
     >
       <div className="grid grid-cols-1 gap-4 lg:h-220 lg:grid-cols-3 lg:grid-rows-4 lg:gap-5">
         <motion.div
@@ -151,8 +151,8 @@ export function Collections() {
             </h2>
 
             <p className="mt-6 max-w-xs text-base leading-relaxed text-neutral-500">
-              Des mat&eacute;riaux nobles, s&eacute;lectionn&eacute;s avec
-              soin pour sublimer vos espaces.
+              Des mat&eacute;riaux nobles, s&eacute;lectionn&eacute;s avec soin
+              pour sublimer vos espaces.
             </p>
           </div>
 
@@ -170,7 +170,11 @@ export function Collections() {
 
         <CollectionCard card={marbres} delay={0.1} />
         {rest.map((card, index) => (
-          <CollectionCard key={card.key} card={card} delay={0.15 + index * 0.1} />
+          <CollectionCard
+            key={card.key}
+            card={card}
+            delay={0.15 + index * 0.1}
+          />
         ))}
       </div>
     </section>
